@@ -18,4 +18,3 @@
 
 (defstate aws
   :start (assoc (creds) :endpoint endpoint))
-

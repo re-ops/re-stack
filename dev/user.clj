@@ -1,16 +1,16 @@
 (ns user
   (:refer-clojure :exclude  [update list])
   (:require
+   [re-stack.core :refer :all]
+   [re-stack.s3 :refer :all]
+   [re-stack.cloudformation :refer :all]
    [mount.core :as mount]
    [clojure.repl :refer :all]
-   [re-stack.core :refer :all]
    [re-stack.log :refer (setup-logging)]
    [clojure.tools.namespace.repl :refer (refresh refresh-all)]
    [clojure.java.io :as io]
    ; re-share
-   [re-share.log :refer (redirect-output debug-on debug-off)]
-   ; Elasticsearch access
-   )
+   [re-share.log :refer (redirect-output debug-on debug-off)])
   (:import java.io.File))
 
 (defn start []
